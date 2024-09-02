@@ -42,7 +42,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -69,7 +70,6 @@ Temporary Items
 
 ### Meson ###
 # subproject directories
-/subprojects/*
 !/subprojects/*.wrap
 
 # Meson Directories
@@ -92,3 +92,4 @@ compile_commands.json
 
 # End of https://www.toptal.com/developers/gitignore/api/c++,macos,meson
 .cache/
+build/

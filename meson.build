@@ -1,9 +1,11 @@
-project('trilka', 'cpp',
-  version : '0.1',
-  default_options : ['warning_level=3',
-                     'cpp_std=c++14'])
+project('my_project', 'cpp')
 
-exe = executable('trilka', 'trilka.cpp',
+libsimple_proj = subproject('trilka')
+libsimple_dep = libsimple_proj.get_variable('libsimple_dep')
+
+subproject('sandbox')
+
+executable('my_project',
+  'my_project.cpp',
+  dependencies : libsimple_dep,
   install : true)
-
-test('basic', exe)
