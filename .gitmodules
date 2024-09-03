@@ -1,0 +1,3 @@
+[submodule "subprojects/trilka/vendor/spdlog"]
+	path = subprojects/trilka/vendor/spdlog
+	url = https://github.com/gabime/spdlog
