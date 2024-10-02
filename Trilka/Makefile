@@ -49,7 +49,7 @@ ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -fPIC -g -mmacosx-version-min=11
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -fPIC -g -std=c++17 -mmacosx-version-min=11
 define POSTBUILDCMDS
 	@echo Running postbuild commands
-	cp -rf ../bin/Debug-macosx-x86_64/Trilka/libTrilka.dylib ../bin/Debug-macosx-x86_64/Sandbox
+	cp -rf ../bin/Debug-macosx-x86_64/Trilka/libTrilka.dylib ../bin/Debug-macosx-x86_64
 endef
 
 else ifeq ($(config),release)
@@ -61,7 +61,7 @@ ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -fPIC -mmacosx-version-min=11
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -fPIC -std=c++17 -mmacosx-version-min=11
 define POSTBUILDCMDS
 	@echo Running postbuild commands
-	cp -rf ../bin/Release-macosx-x86_64/Trilka/libTrilka.dylib ../bin/Release-macosx-x86_64/Sandbox
+	cp -rf ../bin/Release-macosx-x86_64/Trilka/libTrilka.dylib ../bin/Release-macosx-x86_64
 endef
 
 else ifeq ($(config),dist)
@@ -73,7 +73,7 @@ ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -fPIC -mmacosx-version-min=11
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -fPIC -std=c++17 -mmacosx-version-min=11
 define POSTBUILDCMDS
 	@echo Running postbuild commands
-	cp -rf ../bin/Dist-macosx-x86_64/Trilka/libTrilka.dylib ../bin/Dist-macosx-x86_64/Sandbox
+	cp -rf ../bin/Dist-macosx-x86_64/Trilka/libTrilka.dylib ../bin/Dist-macosx-x86_64
 endef
 
 endif
