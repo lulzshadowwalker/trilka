@@ -18,6 +18,9 @@ project "Trilka"
     targetdir("bin/" .. outputdir .. "/%{prj.name}")
     objdir("bin-int/" .. outputdir .. "/%{prj.name}") -- Object (intermediate) files
 
+    pchheader "tkpch.hpp"
+    pchsource "Trilka/src/tkpch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",
